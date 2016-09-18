@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="dotNetIR.BaseIndexing.Document">
+    <Position X="2.25" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAEAAA=</HashCode>
+      <FileName>BaseIndexing\Document.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dotNetIR.BaseIndexing.Index">
+    <Position X="4.5" Y="1.25" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Delegate Name="dotNetIR.BaseIndexing.Index.MatchDocuments" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BaseIndexing\Index.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>BAgABBAAAAAEAAAAAAAAAAQAAAAAAAAAEAAABAAAAAA=</HashCode>
+      <FileName>BaseIndexing\Index.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dotNetIR.BaseIndexing.Metadata">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>BaseIndexing\Metadata.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dotNetIR.BaseQuerying.MatchedDocument">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseQuerying\MatchedDocument.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="dotNetIR.BaseQuerying.IQueryProcessor">
+    <Position X="2.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseQuerying\IQueryProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="dotNetIR.BaseQuerying.IScorer">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseQuerying\IScorer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="dotNetIR.BaseSemantic.IOntologyWrapper">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseSemantic\IOntologyWrapper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

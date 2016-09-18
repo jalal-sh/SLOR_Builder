@@ -1,0 +1,111 @@
+\hypertarget{class_lom_editor_utils_1_1_parsed_scorm}{}\section{Lom\+Editor\+Utils.\+Parsed\+Scorm Class Reference}
+\label{class_lom_editor_utils_1_1_parsed_scorm}\index{Lom\+Editor\+Utils.\+Parsed\+Scorm@{Lom\+Editor\+Utils.\+Parsed\+Scorm}}
+
+
+Parses S\+C\+O\+RM package files in purpose of managing L\+OM  
+
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_lom_editor_utils_1_1_parsed_scorm_af83ea5ea305876a63a3fe46270c84922}{Update\+File\+In\+Scorm} (string scorm\+File, string old\+File, string new\+File)
+\begin{DoxyCompactList}\small\item\em Update a file in the S\+C\+O\+RM package \end{DoxyCompactList}\item 
+static \hyperlink{class_lom_editor_utils_1_1_parsed_scorm}{Parsed\+Scorm} \hyperlink{class_lom_editor_utils_1_1_parsed_scorm_a1d6075c98d793928e9e5d55767c41034}{Parse\+Scorm} (string file\+Path)
+\begin{DoxyCompactList}\small\item\em Parses a S\+C\+O\+RM file and returns an object represnting the parsed S\+C\+O\+RM file in purpose of L\+OM files Editing \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+X\+Document \hyperlink{class_lom_editor_utils_1_1_parsed_scorm_af394da121e9b9e82adb87fa2dc6f2119}{Manifest\+Doc}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em X\+Document representing the S\+C\+O\+RM package manifest File \end{DoxyCompactList}\item 
+List$<$ string $>$ \hyperlink{class_lom_editor_utils_1_1_parsed_scorm_a9fa64170cb8c2b953bc1db584ffe245c}{Lom\+Files\+Locations}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of all L\+OM files inside the S\+C\+O\+RM package \end{DoxyCompactList}\item 
+List$<$ X\+Document $>$ \hyperlink{class_lom_editor_utils_1_1_parsed_scorm_a54f40e6a6b158dfc4ddeaf124b657e1a}{Lom\+Files}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of X\+Documents representing the L\+OM files inside the S\+C\+O\+RM package \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Parses S\+C\+O\+RM package files in purpose of managing L\+OM 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_lom_editor_utils_1_1_parsed_scorm_a1d6075c98d793928e9e5d55767c41034}{}\label{class_lom_editor_utils_1_1_parsed_scorm_a1d6075c98d793928e9e5d55767c41034} 
+\index{Lom\+Editor\+Utils\+::\+Parsed\+Scorm@{Lom\+Editor\+Utils\+::\+Parsed\+Scorm}!Parse\+Scorm@{Parse\+Scorm}}
+\index{Parse\+Scorm@{Parse\+Scorm}!Lom\+Editor\+Utils\+::\+Parsed\+Scorm@{Lom\+Editor\+Utils\+::\+Parsed\+Scorm}}
+\subsubsection{\texorpdfstring{Parse\+Scorm()}{ParseScorm()}}
+{\footnotesize\ttfamily static \hyperlink{class_lom_editor_utils_1_1_parsed_scorm}{Parsed\+Scorm} Lom\+Editor\+Utils.\+Parsed\+Scorm.\+Parse\+Scorm (\begin{DoxyParamCaption}\item[{string}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Parses a S\+C\+O\+RM file and returns an object represnting the parsed S\+C\+O\+RM file in purpose of L\+OM files Editing 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & Location of S\+C\+O\+RM package on disk\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Parsed S\+C\+O\+RM package
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & S\+C\+O\+RM package not found on Disk\\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_lom_editor_utils_1_1_parsed_scorm_af83ea5ea305876a63a3fe46270c84922}{}\label{class_lom_editor_utils_1_1_parsed_scorm_af83ea5ea305876a63a3fe46270c84922} 
+\index{Lom\+Editor\+Utils\+::\+Parsed\+Scorm@{Lom\+Editor\+Utils\+::\+Parsed\+Scorm}!Update\+File\+In\+Scorm@{Update\+File\+In\+Scorm}}
+\index{Update\+File\+In\+Scorm@{Update\+File\+In\+Scorm}!Lom\+Editor\+Utils\+::\+Parsed\+Scorm@{Lom\+Editor\+Utils\+::\+Parsed\+Scorm}}
+\subsubsection{\texorpdfstring{Update\+File\+In\+Scorm()}{UpdateFileInScorm()}}
+{\footnotesize\ttfamily static void Lom\+Editor\+Utils.\+Parsed\+Scorm.\+Update\+File\+In\+Scorm (\begin{DoxyParamCaption}\item[{string}]{scorm\+File,  }\item[{string}]{old\+File,  }\item[{string}]{new\+File }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Update a file in the S\+C\+O\+RM package 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scorm\+File} & The path to the S\+C\+O\+RM package\\
+\hline
+{\em old\+File} & The Name of File to Update in the S\+C\+R\+OM package\\
+\hline
+{\em new\+File} & The path to File to replace the Old file in the S\+C\+O\+RM package\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Property Documentation}
+\hypertarget{class_lom_editor_utils_1_1_parsed_scorm_a54f40e6a6b158dfc4ddeaf124b657e1a}{}\label{class_lom_editor_utils_1_1_parsed_scorm_a54f40e6a6b158dfc4ddeaf124b657e1a} 
+\index{Lom\+Editor\+Utils\+::\+Parsed\+Scorm@{Lom\+Editor\+Utils\+::\+Parsed\+Scorm}!Lom\+Files@{Lom\+Files}}
+\index{Lom\+Files@{Lom\+Files}!Lom\+Editor\+Utils\+::\+Parsed\+Scorm@{Lom\+Editor\+Utils\+::\+Parsed\+Scorm}}
+\subsubsection{\texorpdfstring{Lom\+Files}{LomFiles}}
+{\footnotesize\ttfamily List$<$X\+Document$>$ Lom\+Editor\+Utils.\+Parsed\+Scorm.\+Lom\+Files\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+List of X\+Documents representing the L\+OM files inside the S\+C\+O\+RM package 
+
+\hypertarget{class_lom_editor_utils_1_1_parsed_scorm_a9fa64170cb8c2b953bc1db584ffe245c}{}\label{class_lom_editor_utils_1_1_parsed_scorm_a9fa64170cb8c2b953bc1db584ffe245c} 
+\index{Lom\+Editor\+Utils\+::\+Parsed\+Scorm@{Lom\+Editor\+Utils\+::\+Parsed\+Scorm}!Lom\+Files\+Locations@{Lom\+Files\+Locations}}
+\index{Lom\+Files\+Locations@{Lom\+Files\+Locations}!Lom\+Editor\+Utils\+::\+Parsed\+Scorm@{Lom\+Editor\+Utils\+::\+Parsed\+Scorm}}
+\subsubsection{\texorpdfstring{Lom\+Files\+Locations}{LomFilesLocations}}
+{\footnotesize\ttfamily List$<$string$>$ Lom\+Editor\+Utils.\+Parsed\+Scorm.\+Lom\+Files\+Locations\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+List of all L\+OM files inside the S\+C\+O\+RM package 
+
+\hypertarget{class_lom_editor_utils_1_1_parsed_scorm_af394da121e9b9e82adb87fa2dc6f2119}{}\label{class_lom_editor_utils_1_1_parsed_scorm_af394da121e9b9e82adb87fa2dc6f2119} 
+\index{Lom\+Editor\+Utils\+::\+Parsed\+Scorm@{Lom\+Editor\+Utils\+::\+Parsed\+Scorm}!Manifest\+Doc@{Manifest\+Doc}}
+\index{Manifest\+Doc@{Manifest\+Doc}!Lom\+Editor\+Utils\+::\+Parsed\+Scorm@{Lom\+Editor\+Utils\+::\+Parsed\+Scorm}}
+\subsubsection{\texorpdfstring{Manifest\+Doc}{ManifestDoc}}
+{\footnotesize\ttfamily X\+Document Lom\+Editor\+Utils.\+Parsed\+Scorm.\+Manifest\+Doc\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+X\+Document representing the S\+C\+O\+RM package manifest File 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Jalal/\+Documents/\+Visual Studio 2015/\+Projects/\+S\+L\+O\+R Builder/\+Lom\+Editor/Parsed\+Scorm.\+cs\end{DoxyCompactItemize}

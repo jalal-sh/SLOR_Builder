@@ -1,0 +1,100 @@
+\hypertarget{classdot_net_i_r_1_1_base_indexing_1_1_document}{}\section{dot\+Net\+I\+R.\+Base\+Indexing.\+Document Class Reference}
+\label{classdot_net_i_r_1_1_base_indexing_1_1_document}\index{dot\+Net\+I\+R.\+Base\+Indexing.\+Document@{dot\+Net\+I\+R.\+Base\+Indexing.\+Document}}
+
+
+The base class representing the document we are indexing Note that if you want to serialize the index, the document objects must be serializable  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override int \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_document_a12b172751bdbb782c557fabc2a6b9ecb}{Get\+Hash\+Code} ()
+\begin{DoxyCompactList}\small\item\em returns a hash code associated with this document based on its Identifier \end{DoxyCompactList}\item 
+override bool \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_document_a30bfe8ab80ad0c37350719da8e571de5}{Equals} (object obj)
+\begin{DoxyCompactList}\small\item\em Tests the Equality of two documents based on their idetfiers \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Uri \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_document_a431f21775d46575b1fe5b8ae0305eba0}{Identifier}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em a Uri that gives a document a unique identifier \end{DoxyCompactList}\item 
+string \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_document_a80e92b6ffc89897c1dd53cb491eaf30b}{Cache\+Path}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em the path where the document is Cached \end{DoxyCompactList}\item 
+\hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_metadata}{Metadata} \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_document_a4de0f26b50e8fcb9a37519ba300a3586}{Metadata}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The metadata of this \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_document}{Document} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The base class representing the document we are indexing Note that if you want to serialize the index, the document objects must be serializable 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classdot_net_i_r_1_1_base_indexing_1_1_document_a30bfe8ab80ad0c37350719da8e571de5}{}\label{classdot_net_i_r_1_1_base_indexing_1_1_document_a30bfe8ab80ad0c37350719da8e571de5} 
+\index{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Document@{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Document}!Equals@{Equals}}
+\index{Equals@{Equals}!dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Document@{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Document}}
+\subsubsection{\texorpdfstring{Equals()}{Equals()}}
+{\footnotesize\ttfamily override bool dot\+Net\+I\+R.\+Base\+Indexing.\+Document.\+Equals (\begin{DoxyParamCaption}\item[{object}]{obj }\end{DoxyParamCaption})}
+
+
+
+Tests the Equality of two documents based on their idetfiers 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & another document\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the two documents have the same ID, false otherwise
+\end{DoxyReturn}
+\hypertarget{classdot_net_i_r_1_1_base_indexing_1_1_document_a12b172751bdbb782c557fabc2a6b9ecb}{}\label{classdot_net_i_r_1_1_base_indexing_1_1_document_a12b172751bdbb782c557fabc2a6b9ecb} 
+\index{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Document@{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Document}!Get\+Hash\+Code@{Get\+Hash\+Code}}
+\index{Get\+Hash\+Code@{Get\+Hash\+Code}!dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Document@{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Document}}
+\subsubsection{\texorpdfstring{Get\+Hash\+Code()}{GetHashCode()}}
+{\footnotesize\ttfamily override int dot\+Net\+I\+R.\+Base\+Indexing.\+Document.\+Get\+Hash\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns a hash code associated with this document based on its Identifier 
+
+\begin{DoxyReturn}{Returns}
+a Unique Integer representing the \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_document}{Document}
+\end{DoxyReturn}
+
+
+\subsection{Property Documentation}
+\hypertarget{classdot_net_i_r_1_1_base_indexing_1_1_document_a80e92b6ffc89897c1dd53cb491eaf30b}{}\label{classdot_net_i_r_1_1_base_indexing_1_1_document_a80e92b6ffc89897c1dd53cb491eaf30b} 
+\index{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Document@{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Document}!Cache\+Path@{Cache\+Path}}
+\index{Cache\+Path@{Cache\+Path}!dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Document@{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Document}}
+\subsubsection{\texorpdfstring{Cache\+Path}{CachePath}}
+{\footnotesize\ttfamily string dot\+Net\+I\+R.\+Base\+Indexing.\+Document.\+Cache\+Path\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+the path where the document is Cached 
+
+\hypertarget{classdot_net_i_r_1_1_base_indexing_1_1_document_a431f21775d46575b1fe5b8ae0305eba0}{}\label{classdot_net_i_r_1_1_base_indexing_1_1_document_a431f21775d46575b1fe5b8ae0305eba0} 
+\index{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Document@{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Document}!Identifier@{Identifier}}
+\index{Identifier@{Identifier}!dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Document@{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Document}}
+\subsubsection{\texorpdfstring{Identifier}{Identifier}}
+{\footnotesize\ttfamily Uri dot\+Net\+I\+R.\+Base\+Indexing.\+Document.\+Identifier\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+a Uri that gives a document a unique identifier 
+
+\hypertarget{classdot_net_i_r_1_1_base_indexing_1_1_document_a4de0f26b50e8fcb9a37519ba300a3586}{}\label{classdot_net_i_r_1_1_base_indexing_1_1_document_a4de0f26b50e8fcb9a37519ba300a3586} 
+\index{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Document@{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Document}!Metadata@{Metadata}}
+\index{Metadata@{Metadata}!dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Document@{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Document}}
+\subsubsection{\texorpdfstring{Metadata}{Metadata}}
+{\footnotesize\ttfamily \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_metadata}{Metadata} dot\+Net\+I\+R.\+Base\+Indexing.\+Document.\+Metadata\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The metadata of this \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_document}{Document} 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Jalal/\+Documents/\+Visual Studio 2015/\+Projects/\+S\+L\+O\+R Builder/dot\+Net\+I\+R/\+Base\+Indexing/Document.\+cs\end{DoxyCompactItemize}

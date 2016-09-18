@@ -1,0 +1,173 @@
+\hypertarget{classdot_net_i_r_1_1_base_indexing_1_1_index}{}\section{dot\+Net\+I\+R.\+Base\+Indexing.\+Index Class Reference}
+\label{classdot_net_i_r_1_1_base_indexing_1_1_index}\index{dot\+Net\+I\+R.\+Base\+Indexing.\+Index@{dot\+Net\+I\+R.\+Base\+Indexing.\+Index}}
+
+
+Base \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_index}{Index} Class -\/ No Serialization Predefined  
+
+
+
+
+Collaboration diagram for dot\+Net\+I\+R.\+Base\+Indexing.\+Index\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_document}{Document} \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_index_a47412de8014e09501bbd8bb20fae4f25}{get\+Document\+By\+Uri} (Uri Doc\+Uri)
+\begin{DoxyCompactList}\small\item\em Returns the document with the speicfic identifier \end{DoxyCompactList}\item 
+void \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_index_a4e96cd46ae19e5946767c0c1eb67b992}{Add\+Doc} (\hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_document}{Document} new\+Doc)
+\begin{DoxyCompactList}\small\item\em Adds a new \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_document}{Document} to the index Calls Add\+Doc\+To\+Repo then calls the Doc\+Indexing\+Handler \end{DoxyCompactList}\item 
+virtual \hyperlink{classdot_net_i_r_1_1_base_querying_1_1_matched_document}{Matched\+Document} \mbox{[}$\,$\mbox{]} \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_index_a068d3ddbddbd4ea9031a58a61af8bdfb}{Matcher} (object processed\+User\+Query, \hyperlink{interfacedot_net_i_r_1_1_base_querying_1_1_i_scorer}{I\+Scorer} scorer, double score\+Thresh=0.\+5)
+\begin{DoxyCompactList}\small\item\em The Default Matcher to Search the index \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_index_a519531283425656fe695295b6ec8ca92}{Add\+Doc\+To\+Repo} (\hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_document}{Document} new\+Doc)
+\begin{DoxyCompactList}\small\item\em Adds the document ot the docs array and mapps its uri to its location \end{DoxyCompactList}\item 
+abstract void \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_index_a0542ffc547b7cc72f4615c763589ba3c}{Doc\+Indexing\+Handler} (\hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_document}{Document} new\+Doc)
+\begin{DoxyCompactList}\small\item\em Handles what happens when a new \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_document}{Document} is added to the index \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_document}{Document} \mbox{[}$\,$\mbox{]} \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_index_a3d39c5f32ca9bc6bc076ebcbc72b9923}{Docs}
+\begin{DoxyCompactList}\small\item\em Array of Documents in \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_index}{Index} Protected member, not to be accessed outside the index \end{DoxyCompactList}\item 
+Dictionary$<$ Uri, int $>$ \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_index_a35e48f0af6a704545fa171622c8739b9}{doc\+Mapper}
+\begin{DoxyCompactList}\small\item\em A dictionary the connects two docs \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_index_ac114b35f0475c33f94d8dad4b3942343}{Current\+Doc\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The current Size of index in terms of the documents count \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_index}{Index} Class -\/ No Serialization Predefined 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classdot_net_i_r_1_1_base_indexing_1_1_index_a4e96cd46ae19e5946767c0c1eb67b992}{}\label{classdot_net_i_r_1_1_base_indexing_1_1_index_a4e96cd46ae19e5946767c0c1eb67b992} 
+\index{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index@{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index}!Add\+Doc@{Add\+Doc}}
+\index{Add\+Doc@{Add\+Doc}!dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index@{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index}}
+\subsubsection{\texorpdfstring{Add\+Doc()}{AddDoc()}}
+{\footnotesize\ttfamily void dot\+Net\+I\+R.\+Base\+Indexing.\+Index.\+Add\+Doc (\begin{DoxyParamCaption}\item[{\hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_document}{Document}}]{new\+Doc }\end{DoxyParamCaption})}
+
+
+
+Adds a new \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_document}{Document} to the index Calls Add\+Doc\+To\+Repo then calls the Doc\+Indexing\+Handler 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Doc} & The new \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_document}{Document} to be Added\\
+\hline
+\end{DoxyParams}
+\hypertarget{classdot_net_i_r_1_1_base_indexing_1_1_index_a519531283425656fe695295b6ec8ca92}{}\label{classdot_net_i_r_1_1_base_indexing_1_1_index_a519531283425656fe695295b6ec8ca92} 
+\index{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index@{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index}!Add\+Doc\+To\+Repo@{Add\+Doc\+To\+Repo}}
+\index{Add\+Doc\+To\+Repo@{Add\+Doc\+To\+Repo}!dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index@{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index}}
+\subsubsection{\texorpdfstring{Add\+Doc\+To\+Repo()}{AddDocToRepo()}}
+{\footnotesize\ttfamily void dot\+Net\+I\+R.\+Base\+Indexing.\+Index.\+Add\+Doc\+To\+Repo (\begin{DoxyParamCaption}\item[{\hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_document}{Document}}]{new\+Doc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Adds the document ot the docs array and mapps its uri to its location 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Doc} & The \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_document}{Document} to be Added\\
+\hline
+\end{DoxyParams}
+\hypertarget{classdot_net_i_r_1_1_base_indexing_1_1_index_a0542ffc547b7cc72f4615c763589ba3c}{}\label{classdot_net_i_r_1_1_base_indexing_1_1_index_a0542ffc547b7cc72f4615c763589ba3c} 
+\index{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index@{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index}!Doc\+Indexing\+Handler@{Doc\+Indexing\+Handler}}
+\index{Doc\+Indexing\+Handler@{Doc\+Indexing\+Handler}!dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index@{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index}}
+\subsubsection{\texorpdfstring{Doc\+Indexing\+Handler()}{DocIndexingHandler()}}
+{\footnotesize\ttfamily abstract void dot\+Net\+I\+R.\+Base\+Indexing.\+Index.\+Doc\+Indexing\+Handler (\begin{DoxyParamCaption}\item[{\hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_document}{Document}}]{new\+Doc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Handles what happens when a new \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_document}{Document} is added to the index 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Doc} & New \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_document}{Document} being indexed\\
+\hline
+\end{DoxyParams}
+\hypertarget{classdot_net_i_r_1_1_base_indexing_1_1_index_a47412de8014e09501bbd8bb20fae4f25}{}\label{classdot_net_i_r_1_1_base_indexing_1_1_index_a47412de8014e09501bbd8bb20fae4f25} 
+\index{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index@{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index}!get\+Document\+By\+Uri@{get\+Document\+By\+Uri}}
+\index{get\+Document\+By\+Uri@{get\+Document\+By\+Uri}!dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index@{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index}}
+\subsubsection{\texorpdfstring{get\+Document\+By\+Uri()}{getDocumentByUri()}}
+{\footnotesize\ttfamily \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_document}{Document} dot\+Net\+I\+R.\+Base\+Indexing.\+Index.\+get\+Document\+By\+Uri (\begin{DoxyParamCaption}\item[{Uri}]{Doc\+Uri }\end{DoxyParamCaption})}
+
+
+
+Returns the document with the speicfic identifier 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Doc\+Uri} & Identifies a Single \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_document}{Document}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The document with the specified Uri
+\end{DoxyReturn}
+\hypertarget{classdot_net_i_r_1_1_base_indexing_1_1_index_a068d3ddbddbd4ea9031a58a61af8bdfb}{}\label{classdot_net_i_r_1_1_base_indexing_1_1_index_a068d3ddbddbd4ea9031a58a61af8bdfb} 
+\index{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index@{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index}!Matcher@{Matcher}}
+\index{Matcher@{Matcher}!dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index@{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index}}
+\subsubsection{\texorpdfstring{Matcher()}{Matcher()}}
+{\footnotesize\ttfamily virtual \hyperlink{classdot_net_i_r_1_1_base_querying_1_1_matched_document}{Matched\+Document} \mbox{[}$\,$\mbox{]} dot\+Net\+I\+R.\+Base\+Indexing.\+Index.\+Matcher (\begin{DoxyParamCaption}\item[{object}]{processed\+User\+Query,  }\item[{\hyperlink{interfacedot_net_i_r_1_1_base_querying_1_1_i_scorer}{I\+Scorer}}]{scorer,  }\item[{double}]{score\+Thresh = {\ttfamily 0.5} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The Default Matcher to Search the index 
+
+param name=\char`\"{}processed\+User\+Query\char`\"{}$>$The User Query after being processed
+
+
+\begin{DoxyParams}{Parameters}
+{\em scorer} & an instance of I\+Scorer to claculate the score of each document\\
+\hline
+{\em score\+Thresh} & a threshold to filter out documents below it (default is 0 returns all matched documents)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an array of Matched documents
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classdot_net_i_r_1_1_base_indexing_1_1_index_a35e48f0af6a704545fa171622c8739b9}{}\label{classdot_net_i_r_1_1_base_indexing_1_1_index_a35e48f0af6a704545fa171622c8739b9} 
+\index{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index@{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index}!doc\+Mapper@{doc\+Mapper}}
+\index{doc\+Mapper@{doc\+Mapper}!dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index@{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index}}
+\subsubsection{\texorpdfstring{doc\+Mapper}{docMapper}}
+{\footnotesize\ttfamily Dictionary$<$Uri, int$>$ dot\+Net\+I\+R.\+Base\+Indexing.\+Index.\+doc\+Mapper\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A dictionary the connects two docs 
+
+\hypertarget{classdot_net_i_r_1_1_base_indexing_1_1_index_a3d39c5f32ca9bc6bc076ebcbc72b9923}{}\label{classdot_net_i_r_1_1_base_indexing_1_1_index_a3d39c5f32ca9bc6bc076ebcbc72b9923} 
+\index{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index@{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index}!Docs@{Docs}}
+\index{Docs@{Docs}!dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index@{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index}}
+\subsubsection{\texorpdfstring{Docs}{Docs}}
+{\footnotesize\ttfamily \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_document}{Document} \mbox{[}$\,$\mbox{]} dot\+Net\+I\+R.\+Base\+Indexing.\+Index.\+Docs\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Array of Documents in \hyperlink{classdot_net_i_r_1_1_base_indexing_1_1_index}{Index} Protected member, not to be accessed outside the index 
+
+
+
+\subsection{Property Documentation}
+\hypertarget{classdot_net_i_r_1_1_base_indexing_1_1_index_ac114b35f0475c33f94d8dad4b3942343}{}\label{classdot_net_i_r_1_1_base_indexing_1_1_index_ac114b35f0475c33f94d8dad4b3942343} 
+\index{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index@{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index}!Current\+Doc\+Count@{Current\+Doc\+Count}}
+\index{Current\+Doc\+Count@{Current\+Doc\+Count}!dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index@{dot\+Net\+I\+R\+::\+Base\+Indexing\+::\+Index}}
+\subsubsection{\texorpdfstring{Current\+Doc\+Count}{CurrentDocCount}}
+{\footnotesize\ttfamily int dot\+Net\+I\+R.\+Base\+Indexing.\+Index.\+Current\+Doc\+Count\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+The current Size of index in terms of the documents count 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Jalal/\+Documents/\+Visual Studio 2015/\+Projects/\+S\+L\+O\+R Builder/dot\+Net\+I\+R/\+Base\+Indexing/Index.\+cs\end{DoxyCompactItemize}
