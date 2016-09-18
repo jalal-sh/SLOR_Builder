@@ -25,7 +25,7 @@ namespace dotNetIR.BaseIndexing
         /// <summary>
         /// The metadata of this Document
         /// </summary>
-        public Metadata Metadata { get; private set; }
+        public Metadata Metadata { get; protected set; }
 
         /// <summary>
         /// returns a hash code associated with this document based on its Identifier

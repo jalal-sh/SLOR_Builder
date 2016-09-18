@@ -24,6 +24,7 @@ namespace SlorIndexer.DBContext
         public string Title { get; set; }
         public string ScormPackageLocation { get; set; }
         public string Description { get; set; }
+        public string Uri { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Notion> Notions { get; set; }

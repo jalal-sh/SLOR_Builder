@@ -9,10 +9,11 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Uri" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
           <Property Name="ScormPackageLocation" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Description" Type="text" />
         </EntityType>
         <EntityType Name="LearningObjectNotion">
           <Key>
@@ -87,8 +88,9 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Title" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="ScormPackageLocation" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Notions" Relationship="SLORModel.LearningObjectNotion" FromRole="LearningObject" ToRole="Notion" />
+          <Property Name="Uri" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Notion">
           <Key>
@@ -111,6 +113,7 @@
           <EntitySetMapping Name="LearningObjects">
             <EntityTypeMapping TypeName="SLORModel.LearningObject">
               <MappingFragment StoreEntitySet="LearningObject">
+                <ScalarProperty Name="Uri" ColumnName="Uri" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="ScormPackageLocation" ColumnName="ScormPackageLocation" />
                 <ScalarProperty Name="Title" ColumnName="Title" />

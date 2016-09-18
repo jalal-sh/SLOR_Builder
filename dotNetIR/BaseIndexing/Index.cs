@@ -18,6 +18,14 @@ namespace dotNetIR.BaseIndexing
         protected Document[] Docs;
 
         /// <summary>
+        /// Initializes the Documents Set
+        /// </summary>
+        /// <param name="MaxSize">Maximum number of documents the index may have</param>
+        public Index(int MaxSize)
+        {
+            Docs = new Document[MaxSize];
+        }
+        /// <summary>
         /// A dictionary to find the index of a doc in the <see cref="Docs"/> array
         /// </summary>
         protected Dictionary<Uri, int> docMapper;
