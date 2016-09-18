@@ -36,7 +36,7 @@ namespace LomEditorUtils
             }
             catch (Exception e)
             {
-                LogException(e);
+                LogException(e, "Updating File " + oldFile + " in Scorm " + scormFile);
                 throw;
             }
         }
@@ -92,7 +92,7 @@ namespace LomEditorUtils
             }
             catch (Exception e)
             {
-                LogException(e);
+                LogException(e, "Parsing Scorm: " + filePath);
                 throw;
             }
         }

@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SLORModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="LearningObject">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ScormPackageLocation" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="LearningObjectNotion">
+          <Key>
+            <PropertyRef Name="NotionHash" />
+            <PropertyRef Name="LearningObjectId" />
+          </Key>
+          <Property Name="NotionHash" Type="binary" MaxLength="16" Nullable="false" />
+          <Property Name="LearningObjectId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Notion">
+          <Key>
+            <PropertyRef Name="NotionHash" />
+          </Key>
+          <Property Name="NotionHash" Type="binary" MaxLength="16" Nullable="false" />
+          <Property Name="NotionUri" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_LearningObjectNotion_LearningObject">
+          <End Role="LearningObject" Type="Self.LearningObject" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="LearningObjectNotion" Type="Self.LearningObjectNotion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LearningObject">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LearningObjectNotion">
+              <PropertyRef Name="LearningObjectId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LearningObjectNotion_Notion">
+          <End Role="Notion" Type="Self.Notion" Multiplicity="1" />
+          <End Role="LearningObjectNotion" Type="Self.LearningObjectNotion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Notion">
+              <PropertyRef Name="NotionHash" />
+            </Principal>
+            <Dependent Role="LearningObjectNotion">
+              <PropertyRef Name="NotionHash" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SLORModelStoreContainer">
+          <EntitySet Name="LearningObject" EntityType="Self.LearningObject" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LearningObjectNotion" EntityType="Self.LearningObjectNotion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Notion" EntityType="Self.Notion" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_LearningObjectNotion_LearningObject" Association="Self.FK_LearningObjectNotion_LearningObject">
+            <End Role="LearningObject" EntitySet="LearningObject" />
+            <End Role="LearningObjectNotion" EntitySet="LearningObjectNotion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LearningObjectNotion_Notion" Association="Self.FK_LearningObjectNotion_Notion">
+            <End Role="Notion" EntitySet="Notion" />
+            <End Role="LearningObjectNotion" EntitySet="LearningObjectNotion" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SLORModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="SLOREntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="LearningObjects" EntityType="SLORModel.LearningObject" />
+          <EntitySet Name="Notions" EntityType="SLORModel.Notion" />
+          <AssociationSet Name="LearningObjectNotion" Association="SLORModel.LearningObjectNotion">
+            <End Role="LearningObject" EntitySet="LearningObjects" />
+            <End Role="Notion" EntitySet="Notions" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="LearningObject">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ScormPackageLocation" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Notions" Relationship="SLORModel.LearningObjectNotion" FromRole="LearningObject" ToRole="Notion" />
+        </EntityType>
+        <EntityType Name="Notion">
+          <Key>
+            <PropertyRef Name="NotionHash" />
+          </Key>
+          <Property Name="NotionHash" Type="Binary" Nullable="false" MaxLength="16" FixedLength="true" />
+          <Property Name="NotionUri" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="LearningObjects" Relationship="SLORModel.LearningObjectNotion" FromRole="Notion" ToRole="LearningObject" />
+        </EntityType>
+        <Association Name="LearningObjectNotion">
+          <End Type="SLORModel.LearningObject" Role="LearningObject" Multiplicity="*" />
+          <End Type="SLORModel.Notion" Role="Notion" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SLORModelStoreContainer" CdmEntityContainer="SLOREntities">
+          <EntitySetMapping Name="LearningObjects">
+            <EntityTypeMapping TypeName="SLORModel.LearningObject">
+              <MappingFragment StoreEntitySet="LearningObject">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ScormPackageLocation" ColumnName="ScormPackageLocation" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Notions">
+            <EntityTypeMapping TypeName="SLORModel.Notion">
+              <MappingFragment StoreEntitySet="Notion">
+                <ScalarProperty Name="NotionUri" ColumnName="NotionUri" />
+                <ScalarProperty Name="NotionHash" ColumnName="NotionHash" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="LearningObjectNotion" TypeName="SLORModel.LearningObjectNotion" StoreEntitySet="LearningObjectNotion">
+            <EndProperty Name="Notion">
+              <ScalarProperty Name="NotionHash" ColumnName="NotionHash" />
+            </EndProperty>
+            <EndProperty Name="LearningObject">
+              <ScalarProperty Name="Id" ColumnName="LearningObjectId" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="566fbc4523ce48ed9e21f3b1cbca7c00" Name="Diagram1">
+        <EntityTypeShape EntityType="SLORModel.LearningObject" Width="1.5" PointX="0.5" PointY="0.875" />
+        <EntityTypeShape EntityType="SLORModel.Notion" Width="1.5" PointX="4.25" PointY="0.875" />
+        <AssociationConnector Association="SLORModel.LearningObjectNotion" ManuallyRouted="true" >
+          <ConnectorPoint PointX="2" PointY="1.6728417968750002" />
+          <ConnectorPoint PointX="2.7945833333333336" PointY="1.6728417968750002" />
+          <ConnectorPoint PointX="2.7945833333333336" PointY="3.2665917968750007" />
+          <ConnectorPoint PointX="3.4241666666666672" PointY="3.2665917968750007" />
+          <ConnectorPoint PointX="3.4241666666666672" PointY="1.6728417968750002" />
+          <ConnectorPoint PointX="4.25" PointY="1.6728417968750002" />
+        </AssociationConnector>
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
